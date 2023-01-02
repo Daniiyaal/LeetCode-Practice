@@ -15,5 +15,9 @@ var detectCapitalUse = function(word) {
     return /^([A-Z]+|[A-Z][a-z]*|[a-z]+)$/.test(word);
 };
 
+let words = ['USA', 'FlaG', 'CuRrEnCy']
 
-detectCapitalUse("FlaG");
+for(let word of words){
+    let val = detectCapitalUse(word);
+    console.log(word + " => " + val);
+}
