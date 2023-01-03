@@ -15,19 +15,19 @@
  * @return {string}
  */
 var capitalizeTitle = function (title) {
-    // splitting and converting into array of strings
-  const titleArray = title.split(' ');
-  //loop through each element of the array and capitalize the first letter
+  const titleArray = title.split(' ')
   for (var i = 0; i < titleArray.length; i++) {
-    const lowerCaseWord = titleArray[i].toLowerCase();
+    const lowerCaseWord = titleArray[i].toLowerCase()
+    console.log(lowerCaseWord)
     titleArray[i] =
       titleArray[i].length > 2
         ? titleArray[i].charAt(0).toUpperCase() + lowerCaseWord.slice(1)
-        : titleArray[i]
+        : lowerCaseWord
+    console.log(titleArray[i])
   }
+  // console.log(titleArray);
   const result = titleArray.join(' ')
-  console.log(result)
   return result
 }
 
-capitalizeTitle("capiTalIze tHe titLe");
+capitalizeTitle('capiTalIze tHe titLe')
